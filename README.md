@@ -190,6 +190,6 @@ Berdasarkan pilihan pengguna:
 
 # Berikut adalah contoh penggunaan program
 
-![foto](
+![foto](https://github.com/keeyyaaa/praktikum05/blob/main/hasil%20running%20code.png?raw=true)
 
    
