@@ -115,4 +115,81 @@ Fungsi ini mencari data berdasarkan NIM yang diinputkan.
 Jika NIM ditemukan, data mahasiswa dihapus menggunakan perintah del.
 
 Jika tidak ditemukan, program menampilkan pesan "Data tidak ditemukan!".
+
+## 6. Fungsi `cari_data`
+
+```python
+def cari_data():
+    nim = input("Masukkan NIM yang dicari: ")
+    if nim in data_mahasiswa:
+        data = data_mahasiswa[nim]
+        print("\nData ditemukan:")
+        print(f"NIM        : {nim}")
+        print(f"Nama       : {data['nama']}")
+        print(f"Nilai Tugas: {data['tugas']}")
+        print(f"Nilai UTS  : {data['uts']}")
+        print(f"Nilai UAS  : {data['uas']}")
+        print(f"Nilai Akhir: {data['akhir']:.2f}\n")
+    else:
+        print("Data tidak ditemukan!\n")
+```
+
+Penjelasan:
+
+Fungsi ini mencari data mahasiswa berdasarkan NIM.
+
+Jika ditemukan, data lengkap mahasiswa ditampilkan.
+
+Jika tidak ditemukan, program menampilkan pesan "Data tidak ditemukan!".
+
+## 7. Menu Utama
+
+```python
+while True:
+    print("Program Input Nilai")
+    print("===================")
+    print("(L)ihat, (T)ambah, (U)bah, (H)apus, (C)ari, (K)eluar")
+    pilihan = input("Pilihan: ").lower()
+
+    if pilihan == 'l':
+        tampilkan_data()
+    elif pilihan == 't':
+        tambah_data()
+    elif pilihan == 'u':
+        ubah_data()
+    elif pilihan == 'h':
+        hapus_data()
+    elif pilihan == 'c':
+        cari_data()
+    elif pilihan == 'k':
+        print("Keluar dari program. Terima kasih!")
+        break
+    else:
+        print("Pilihan tidak valid!\n")
+```
+
+Penjelasan:
+
+Program menampilkan menu pilihan setiap kali perulangan dijalankan.
+
+Input pengguna diterjemahkan ke huruf kecil menggunakan .lower().
+
+Berdasarkan pilihan pengguna:
+
+'l': Menampilkan semua data.
+
+'t': Menambah data baru.
+
+'u': Mengubah data mahasiswa.
+
+'h': Menghapus data mahasiswa.
+
+'c': Mencari data mahasiswa berdasarkan NIM.
+
+'k': Keluar dari program.
+
+# Berikut adalah contoh penggunaan program
+
+![foto](
+
    
